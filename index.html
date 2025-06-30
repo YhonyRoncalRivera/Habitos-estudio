@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Hábitos de Estudio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="retro-header">
+        <span id="jugador1">JUGADOR 1</span>
+        <span id="max-score">PUNTUACIÓN MÁS ALTA: <span id="max-score-value">0</span></span>
+        <span id="jugador2">JUGADOR 2</span>
+    </div>
+    <div class="central-wrapper">
+        <img src="imgg/koala 1.png" alt="Koala 1" id="koala-left" />
+        <div class="container" role="main">
+            <!-- Pantalla de bienvenida -->
+            <div id="welcome-screen">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Avatar" id="avatar-img" width="80" height="80" />
+                <h1>Juego de Hábitos de Estudio</h1>
+                <p>¡Pon a prueba y mejora tus hábitos de estudio!</p>
+                <input type="text" id="username" placeholder="Ingresa tu nombre" maxlength="20" aria-label="Nombre de usuario">
+                <select id="avatar-select" aria-label="Selecciona tu avatar">
+                    <option value="https://cdn-icons-png.flaticon.com/512/4140/4140047.png">👩‍🎓</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/4140/4140061.png">👨‍🎓</option>
+                </select>
+                <button id="start-btn"><span>▶</span> Comenzar</button>
+            </div>
+            <!-- Barra de progreso -->
+            <div id="progress-bar-container" class="hidden" aria-label="Barra de progreso">
+                <div id="progress-bar"></div>
+                <span id="progress-text"></span>
+            </div>
+            <!-- Juego -->
+            <div id="quiz-container" class="hidden" aria-live="polite">
+                <div id="user-info">
+                    <img id="user-avatar" src="" alt="Avatar usuario" width="40" height="40" />
+                    <span id="user-name"></span>
+                </div>
+                <div id="question"></div>
+                <div id="options"></div>
+                <button id="next-btn" disabled><span>⏭</span> Siguiente</button>
+            </div>
+            <!-- Resultados -->
+            <div id="result" class="hidden" aria-live="polite"></div>
+            <button id="restart-btn" class="hidden"><span>🔄</span> Volver a empezar</button>
+        </div>
+        <img src="imgg/koala 2.png" alt="Koala 2" id="koala-right" />
+    </div>
+    <div id="footer-text">¡PONTE A PRUEBA Y MEJORA TUS HÁBITOS DE ESTUDIO!</div>
+    <div class="retro-star" style="top: 80px; left: 40px;"></div>
+    <div class="retro-star" style="top: 120px; right: 60px;"></div>
+    <div class="retro-heart" style="top: 160px; left: 50%;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
