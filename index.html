@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafío Académico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="retro-header">
+        <span id="jugador1">JUGADOR 1</span>
+        <span id="max-score">PUNTUACIÓN MÁXIMA: <span id="max-score-value">0</span></span>
+        <span id="jugador2">JUGADOR 2</span>
+    </div>
+    <div class="central-wrapper">
+        <img src="imgg/koala1.png" alt="Koala 1" id="koala-left" />
+        <div class="container" role="main">
+            <!-- Pantalla de bienvenida -->
+            <div id="welcome-screen">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Avatar" id="avatar-img" width="80" height="80" />
+                <h1>Desafío Académico</h1>
+                <p>¡Pon a prueba y mejora tus habilidades académicas!</p>
+                <input type="text" id="username" placeholder="Ingresa tu nombre" maxlength="20" aria-label="Nombre de usuario">
+                <select id="avatar-select" aria-label="Selecciona tu avatar">
+                    <option value="https://cdn-icons-png.flaticon.com/512/4140/4140047.png">👩‍🎓</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/4140/4140061.png">👨‍🎓</option>
+                </select>
+                <button id="start-btn"><span>▶</span> Comenzar</button>
+                <button id="continue-routine-btn" class="hidden" style="margin-top: 15px; padding: 10px 20px; border: 2px solid #4caf50; background: #4caf50; color: #fff; font-family: 'Press Start 2P', cursive, Arial, sans-serif; font-size: 0.7em; cursor: pointer; transition: all 0.2s ease; outline: none; text-shadow: 1px 1px 0 #000; box-shadow: 0 0 0 3px #181825, 0 0 6px #4caf50; border-radius: 5px;">
+                    <span>📚</span> Continuar mi rutina de estudio
+                </button>
+            </div>
+            <!-- Barra de progreso -->
+            <div id="progress-bar-container" class="hidden" aria-label="Barra de progreso">
+                <div id="progress-bar"></div>
+                <span id="progress-text"></span>
+            </div>
+            <!-- Juego -->
+            <div id="quiz-container" class="hidden" aria-live="polite">
+                <div id="user-info">
+                    <img id="user-avatar" src="" alt="Avatar usuario" width="40" height="40" />
+                    <span id="user-name"></span>
+                </div>
+                <div id="question"></div>
+                <div id="options"></div>
+                <button id="next-btn" disabled><span>⏭</span> Siguiente</button>
+            </div>
+            <!-- Resultados -->
+            <div id="result" class="hidden" aria-live="polite"></div>
+            <button id="restart-btn" class="hidden"><span>🔄</span> Volver a empezar</button>
+            
+            <!-- Nueva sección: Rutina de Estudio -->
+            <div id="study-routine" class="hidden" aria-live="polite">
+                <div class="routine-header">
+                    <img id="routine-avatar" src="" alt="Avatar rutina" width="60" height="60" style="border-radius:50%;border:2px solid #0077cc;margin-bottom:10px;">
+                    <h2>📚 Tu Rutina de Estudio Personalizada</h2>
+                    <p>Basada en tu puntaje de <span id="routine-score"></span>, hemos creado una rutina de 21 días para fortalecer tus hábitos de estudio.</p>
+                </div>
+                
+                <div class="routine-info">
+                    <div class="progress-summary">
+                        <div class="progress-circle">
+                            <span id="completion-percentage">0%</span>
+                        </div>
+                        <p>Progreso general</p>
+                    </div>
+                    <div class="routine-stats">
+                        <div class="stat">
+                            <span id="completed-days">0</span>
+                            <p>Días completados</p>
+                        </div>
+                        <div class="stat">
+                            <span id="remaining-days">21</span>
+                            <p>Días restantes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="routine-calendar">
+                    <h3>📅 Calendario de 21 Días</h3>
+                    <div id="calendar-grid"></div>
+                </div>
+                
+                <div class="routine-actions">
+                    <button id="mark-today-btn" class="primary-btn">
+                        <span>✅</span> Marcar día actual como completado
+                    </button>
+                    <button id="reset-routine-btn" class="secondary-btn">
+                        <span>🔄</span> Reiniciar rutina
+                    </button>
+                    <button id="back-to-menu-btn" class="secondary-btn">
+                        <span>🏠</span> Volver al menú
+                    </button>
+                </div>
+                
+                <div id="final-result" class="hidden">
+                    <h3>🎉 ¡Rutina Completada!</h3>
+                    <div class="final-stats">
+                        <p>Tu porcentaje de cumplimiento: <span id="final-percentage"></span></p>
+                        <p id="final-message"></p>
+                    </div>
+                    <button id="new-routine-btn" class="primary-btn">
+                        <span>🚀</span> Comenzar nueva rutina
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="imgg/koala2.png" alt="Koala 2" id="koala-right" />
+    </div>
+    <div id="footer-text">¡PONTE A PRUEBA Y MEJORA TUS HABILIDADES ACADÉMICAS!</div>
+    <div class="retro-star" style="top: 80px; left: 40px;"></div>
+    <div class="retro-star" style="top: 120px; right: 60px;"></div>
+    <div class="retro-heart" style="top: 160px; left: 50%;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
